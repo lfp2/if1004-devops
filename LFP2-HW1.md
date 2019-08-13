@@ -1,5 +1,5 @@
 # Learning Git
-[logo]
+![alt text][logo]
 [logo]: https://drive.google.com/open?id=1W3LvwU3zn99hyPfaR6Kawog_o0YBcd4D "Learning Git"
 # Hooks
 ```
@@ -12,7 +12,7 @@ chmod u+x .git/hooks/*
 xdg-open https://www.google.com/
 ```
 
-#Screencast
+# Screencast
 [Link to screencast](https://drive.google.com/open?id=1arkhHs5RO2C4pAdV-oKFe-mEn10srLoD)
 # Concepts
 1. Continuous integration é o processo de integração de uma branch com a base existente, chegando a ser realizada várias vezes por dia. Continuous delivery é a entrega do código para um ambiente, mas diferente do Continuous Deployment - onde a entrega é feita para produção sem intervenção de humanos, essa entrega depende de uma autorização manual.

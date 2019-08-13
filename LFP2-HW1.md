@@ -1,5 +1,5 @@
 # Learning Git
-![Learning Git Branches](https://drive.google.com/open?id=1W3LvwU3zn99hyPfaR6Kawog_o0YBcd4D)
+![Learning Git Branches](https://i.ibb.co/R6JYT0G/Screenshot-from-2019-08-12-20-52-10.png)
 # Hooks
 ```
 chmod u+x .git/hooks/*

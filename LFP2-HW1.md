@@ -1,5 +1,6 @@
 # Learning Git
-![alt text](https://drive.google.com/open?id=1W3LvwU3zn99hyPfaR6Kawog_o0YBcd4D "Learning Git progress")
+[logo]
+[logo]: https://drive.google.com/open?id=1W3LvwU3zn99hyPfaR6Kawog_o0YBcd4D "Learning Git"
 # Hooks
 ```
 chmod u+x .git/hooks/*
@@ -10,6 +11,7 @@ chmod u+x .git/hooks/*
 
 xdg-open https://www.google.com/
 ```
+
 #Screencast
 [Link to screencast](https://drive.google.com/open?id=1arkhHs5RO2C4pAdV-oKFe-mEn10srLoD)
 # Concepts

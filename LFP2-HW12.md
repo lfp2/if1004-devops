@@ -1,0 +1,11 @@
+# Forward and backward compatibility
+Um serviço é compatível backward se uma nova feature mantém o comportamento antigo se perceber que a requisição é para este comportamento. O comportamento do forward é gerar erros se o cliente deseja uma feature da versão B enquanto está na versão A - onde ela não foi implementada.
+Backward compatibility exige mudanças no cliente, sendo necessária uma camada extra para converter a API externa antiga para a API externa nova, sendo uma das consequências você manter APIs que não são mais usadas por nenhum cliente.
+Esses dois tipos de abordagem criaram novas técnicas - como Discovery, Exploration e Portability Layer. Discovery permite que o cliente saiba a versão do serviço que ele irá requisitar, caso não esteja presente será aparesentado com uma mensagem de erro - usado na abordagem do forward compability. Discovery assume que as livrarias e third-party softwares possuem esse registro, cabendo ao Exploration fazer isso. A introspecção requere que a livraria ou o software dsponibilize a versão em tempo de execução e assume que o cliente sabe que versão ele deseja. Portability layer é uma interface disponibilizada para o serviço externo onde versões do mesmo sistema podem co-existir. Se elas de fato co-existem, o sistema precisa decidir no runtime - senão, ele é resolvido no tempo de build.
+
+# Rolling back strategies
+Há duas estratégias para rollbacks: uma com feature toogling e a outra sem. Feature toogling permite testar facilmente o código em produção - em caso de problemas que não geram novos erros, é só desativa-la. Porém, isso gera o problema de saber quando as VMs receberam upgrades suficientes para mudar o comportamento da feature. Sem feature toogling, é mais dificil realizar Canary testing e é necessário reinstalar a versão anterior da VM. Em ambos os casos, é bastante complicado lidar com dados escritos de maneira errônea na base com impacto nos negócios da empresa.
+
+# Deployment approaches
+
+[AWS AMI Design](https://aws.amazon.com/answers/configuration-management/aws-ami-design/): permite tanto lightly-baked images quanto heavily-baked images.
